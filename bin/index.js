@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const yargs = require("yargs");
 const TOTP = require("../src/TOTP");
 const chalk = require("chalk");

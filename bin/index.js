@@ -18,13 +18,13 @@ const options = yargs(process.argv.slice(2))
   })
   .option("w", {
     alias: "watch",
-    describe: "Watch the OTP code",
+    describe: "Watch the OTP code.",
     type: "boolean",
     demandOption: false,
   })
   .option("S", {
     alias: "save",
-    describe: "Save the seed to a file",
+    describe: "Save the seed to a file.",
     type: "boolean",
     demandOption: false,
   })

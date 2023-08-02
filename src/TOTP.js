@@ -1,6 +1,6 @@
-import jsSHA from "jssha";
+const jsSHA = require("jssha");
 
-export default class TOTP {
+class TOTP {
   constructor(secret) {
     this.key = base32tohex(secret);
   }
@@ -81,3 +81,5 @@ function leftpad(str, len, pad) {
   }
   return str;
 }
+
+module.exports = TOTP;

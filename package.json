@@ -1,0 +1,22 @@
+{
+  "name": "totp-seed-cli",
+  "version": "1.0.0",
+  "description": "Provided a TOTP seed, this will generate a one time passcode for that seed and display how much time left it has in your CLI.",
+  "main": "./bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "totp": "./bin/index.js"
+  },
+  "type": "module",
+  "keywords": ["totp", "cli", "one time passcode"],
+  "author": "Ricardo Magalhaes",
+  "license": "ISC",
+  "dependencies": {
+    "boxen": "^7.1.1",
+    "chalk": "^5.3.0",
+    "jssha": "^1.6.0",
+    "yargs": "^17.7.2"
+  }
+}

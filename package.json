@@ -1,6 +1,6 @@
 {
   "name": "totp-seed-cli",
-  "version": "1.1.2",
+  "version": "1.2.2",
   "description": "Provided a TOTP seed, this will generate a one time passcode for that seed and display how much time left it has in your CLI.",
   "main": "./bin/index.js",
   "scripts": {

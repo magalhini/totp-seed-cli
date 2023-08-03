@@ -28,6 +28,12 @@ const options = yargs(process.argv.slice(2))
     type: "boolean",
     demandOption: false,
   })
+  .option("c", {
+    alias: "copy",
+    describe: "Copy the OTP code to the clipboard.",
+    type: "boolean",
+    demandOption: false,
+  })
   .help(true).argv;
 
 fs.readFile("seed.txt", "utf8", (err, data) => {
@@ -58,6 +64,10 @@ fs.readFile("seed.txt", "utf8", (err, data) => {
     });
   }
 
+  if (options.copy) {
+    pbcopy(key);
+  }
+
   printCode(key, seconds);
 });
 
@@ -75,4 +85,10 @@ function printCode(otpKey, seconds) {
     })
   );
   console.log(`${chalk.blue(seconds)} seconds remaining for this code.`);
+}
+
+function pbcopy(data) {
+  const proc = require("child_process").spawn("pbcopy");
+  proc.stdin.write(data);
+  proc.stdin.end();
 }

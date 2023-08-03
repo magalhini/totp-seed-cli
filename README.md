@@ -22,32 +22,44 @@ topt-seed-cli -s AC6ZWNRLFOG5JUQHC5YW6BXX2K675AZX
 
 ## Installing
 
-If you're using a particular seed every time, I recommend globally installing this package and either:
-
-- save the key to a local file using the `-S` option
-- creating a shell alias containing your key
-
-To install it globally:
+To use `totp` locally in your CLI, install it globally using npm:
 
 `npm i -g totp-seed-cli`
 
 ## Usage
 
-If you've installed it globally:
+Use `-s` to pass in your seed:
 
 `totp -s ABCDEFGH`
 
-Will output the code to the console.
+This will output the code to the console.
+
+### Copy to clipboard
+
+To display the code and the time remaining, but also copy it to the clipboard, pass `-c`:
 
 `totp -s ABCDEFGH -c`
 
-Will also copy the code to your clipboard.
+### Save seed and read it from local file:
 
-To save the seed in a local file for future use:
+To save the seed in a local file for future use, pass `-S`
 
 `totp -s ABCDEFGH -S`
 
 From here on, you can just call `totp`.
+
+### Create an alias for your seed
+
+Using your shell of choice, you can create an alias so you can call this from anywhere without having to pass your seed.
+If you're using `zsh`, use your editor to edit your `.zshrc`:
+
+1. `vi ~/.zshrc`
+
+Add an alias with your seed and the copy command, such as:
+
+`alias otp="totp -s ABCDEFGH -c"`
+
+Save the file and restart your terminal. You can now simply call `otp` from anywhere.
 
 **Acknowledgements**: the source for the `TOTP` Class is entirely sourced from the [Blendist's TOTP.io](https://github.com/venables/totp.io) project, which is the web equivalent of this project and where I got the inspiration to do this from.
 

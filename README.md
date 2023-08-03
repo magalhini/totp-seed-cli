@@ -3,7 +3,7 @@
 Given a TOTP seed, you can generate one-time passcodes on your CLI, also receiving the time remaining for a particular code. Passing the `-c` option will also immediately copy it to the clipboard.
 
 ```bash
-topt-seed-cli -s AC6ZWNRLFOG5JUQHC5YW6BXX2K675AZX
+topt-seed-cli -s BD6ZWNRLEOG5JUQHC2YW6BXX2K675AZX
 
 
    ╔════════════╗

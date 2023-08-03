@@ -59,17 +59,17 @@ function hex2dec(s) {
  * @returns {String} The hexadecimal value
  */
 function base32tohex(base32) {
-  var base32chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
-  var bits = "";
-  var hex = "";
+  const base32chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
+  let bits = "";
+  let hex = "";
 
-  for (var i = 0; i < base32.length; i++) {
-    var val = base32chars.indexOf(base32.charAt(i).toUpperCase());
+  for (let i = 0; i < base32.length; i++) {
+    const val = base32chars.indexOf(base32.charAt(i).toUpperCase());
     bits += leftpad(val.toString(2), 5, "0");
   }
 
-  for (var j = 0; j + 4 <= bits.length; j += 4) {
-    var chunk = bits.substr(j, 4);
+  for (let j = 0; j + 4 <= bits.length; j += 4) {
+    const chunk = bits.substr(j, 4);
     hex = hex + parseInt(chunk, 2).toString(16);
   }
   return hex;

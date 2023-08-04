@@ -1,4 +1,4 @@
-# TOTP ClI
+# TOTP Seed CLI
 
 Given a TOTP seed, you can generate one-time passcodes on your CLI, also receiving the time remaining for a particular code. Passing the `-c` option will also immediately copy it to the clipboard.
 
@@ -15,10 +15,15 @@ topt-seed-cli -s BD6ZWNRLEOG5JUQHC2YW6BXX2K675AZX
 9 seconds remaining for this code.
 ```
 
+---
+
 ## tl;dr
 
-1. Install it globally using `npm i -g totp-seed-cli`
-2. Pass it a seed and use the optional `-c` flag to copy the code to your clipboard: `totp -s ABCDEFGH -c`
+1. Install it globally using `npm i -g totp-seed-cli`.
+2. Pass it a seed and use the optional `-c` flag to copy the code to your clipboard: `totp -s ABCDEFGH -c`.
+3. Pass the optional `-w` if you'd like it to generate another code once time expires.
+
+---
 
 ## Installing
 
